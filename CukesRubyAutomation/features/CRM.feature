@@ -1,14 +1,13 @@
-Feature: CRM Automation
+Feature: Google Search
 
-Scenario Outline: CRM Login
-Given I visit the url "https://test.salesforce.com/"
-When I fill list of values from column <username> in the input field "username"
-When I fill list of values from column <password> in the input field "pw"
-When I click the button "Log in to Salesforce"
+Scenario Outline: Google Search
+Given I visit the url "https://www.google.co.in/"
+When I fill list of values from column <KeyWord> in the input field "q"
+When I click the button "btng"
 Then Sleep for "15" seconds
 Then The expected text appears on page <expected>
 
 Examples:
-    | username 							| password| expected |
-    | pkathirvel@greendotcorp.com.qa4   |sfdcqa4!23| qa4	  |
+    | KeyWord                   | Expected              |
+    | Testing Keywork google    | Testing Keywork google|
     
